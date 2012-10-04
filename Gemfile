@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,6 +9,10 @@ gem 'rails', '3.2.8'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
+  gem 'guard-rspec'
+  gem 'guard-spork','1.2.0'
+  gem 'spork','0.9.2'
+  gem 'fuubar'
 end
 
 
@@ -27,6 +32,8 @@ gem 'jquery-rails'
 
 group :test do
   gem 'capybara'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'terminal-notifier-guard'
 end
 
 group :production do
@@ -35,6 +42,13 @@ end
 
 gem 'slim'
 gem 'slim-rails'
+gem 'unicorn'
+
+group :development do
+  gem 'rails-footnotes'
+  gem 'newrelic_rpm'
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
