@@ -42,7 +42,6 @@ end
 
 gem 'slim'
 gem 'slim-rails'
-gem 'unicorn'
 
 group :development do
   gem 'rails-footnotes'
